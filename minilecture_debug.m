@@ -1,6 +1,6 @@
 function minilecture_debug
 %minilecture_debug contains short lecture on debugging in matlab
-% 2017, Alexander Heimel
+% 2017-2018, Alexander Heimel
 
 % Matlab is an interpreter. It can directly execute your matlab code
 % It is also easy to break into a function and halt it to examine the variables.
@@ -16,6 +16,7 @@ x = 2;
 dbstop 22
 
 % F10 takes a single step jumping functions
+
 x = factorial(x);
 
 % F11 takes a step jumping into functions (Shift-F11 to escape)
@@ -29,14 +30,18 @@ dbclear all % clears all breakpoints
 dbstop 31
 subminilecture(2131975);
 
+% y = z
+
 % also useful is 
 
 dbstop if error
 
+y = x(2)
 
 
 % once we correct this, we can continue
 % run the line below with F9
+
 
 y = 1
 
@@ -50,7 +55,7 @@ y = factorial(y)
 
 %% Until the next section
 help dbstop
-
+ 
 %% So where does debugging come from?
 im = imread('Hopper_young.jpg');
 h = figure('Name','Grace Hopper','NumberTitle','Off','Menu','None');
