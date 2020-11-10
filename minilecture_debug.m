@@ -1,4 +1,4 @@
-function minilecture_debug
+function minilecture_debug(verbose)
 %minilecture_debug contains short lecture on debugging in matlab
 % 2017-2018, Alexander Heimel
 
@@ -6,14 +6,19 @@ function minilecture_debug
 % It is also easy to break into a function and halt it to examine the variables.
 % You do this with by setting a breakpoint
 
-dbstop 11 % set breakpoint at line 11
+%dbstop 11 % set breakpoint at line 11
+
+if nargin<1
+    verbose = false;
+end
+
 
 x = 2;
 
 % once at the breakpoint, K>> to shows that you are interrupting something
 % F10 takes a single step
 
-dbstop 22
+%dbstop 22
 
 % F10 takes a single step jumping functions
 
@@ -25,16 +30,16 @@ x = factorial(x);
 %dbcont continues execution (or to the next breakpoint)
 % just like F5 or Run
 
-dbclear all % clears all breakpoints 
+%dbclear all % clears all breakpoints 
 
-dbstop 31
+%dbstop 31
 subminilecture(2131975);
 
 % y = z
 
 % also useful is 
 
-dbstop if error
+%dbstop if error
 
 y = x(2)
 
@@ -100,6 +105,13 @@ web 'www.google.nl/search?q=matlab+plot+4d'
 %% the web is full with Matlab tutorials and courses
 % but if you want a quick fix of Matlab then check out
 % Loren's Matlab blog
+
+verbose = true;
+if verbose
+    figure
+    plot(x,y)
+end
+
 
 web 'http://blogs.mathworks.com/loren/'
 
