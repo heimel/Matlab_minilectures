@@ -1,29 +1,42 @@
 function fitting_example
 %FITTING_EXAMPLE show fminsearch in fitting a model 
 %
-% 2017, Alexander Heimel
+% 2017-2020, Alexander Heimel
 
-% measure data
-n_trials = 20;
-data.x = repmat(0:0.1:1,n_trials,1)
-data.y = measure_model( data.x );
+%% measure data
+clear all
+nature_params = [5 -4 3];
+disp(['Nature: ' mat2str(nature_params)]);
+
+n_trials = 10;
+data.x = repmat(0:0.1:1,n_trials,1) + 0.1*rand(n_trials,11)-0.05;
+data.y = polyval(nature_params,data.x) + rand(size(data.x));
 
 % plot data
-figure
-plot(data.x(:),data.y(:),'o')
+figure;
+plot(data.x(:),data.y(:),'ob','MarkerFace',[0 0 1])
+box off
 
-% % fit model
-fit_params = fminsearch( @(p) poly_cost(p,data),[1 1 1])
-% 
-% 
-% % plot model fit
-x = unique(data.x);
+%% fit linear model
+lm = fitlm(data.x(:),data.y(:))
+co = lm.Coefficients.Estimate;
+x = linspace(min(data.x(:)),max(data.x(:)),100);
 hold on
-plot(x,polyval(fit_params,x),'-');
+h.lm = plot(x,co(1) + co(2)*x,'-','linewidth',2);
+
+%% fit model using polyfit
+polyfit_params = polyfit(data.x(:),data.y(:),2);
+disp(['Polyfit: ' mat2str(polyfit_params,3)]);
+hold on
+%x = unique(data.x);
+h.poly = plot(x,polyval(polyfit_params,x),'-k','linewidth',2);
+
+%% fit model using fminsearch
+fmin_params = fminsearch( @(p) poly_cost(p,data),[1 1 1]);
+disp(['Fminsearch: ' mat2str(fmin_params,3)]);
+hold on
+h.fmin = plot(x,polyval(fmin_params,x),'-','linewidth',2);
 
 function cost = poly_cost(params,data)
 cost = sum((polyval(params,data.x(:)) - data.y(:) ).^2);
 
-function y = measure_model( x )
-model_params = [5 -4 3];
-y = polyval(model_params,x) + rand(size(x));
