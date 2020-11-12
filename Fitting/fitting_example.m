@@ -4,13 +4,13 @@ function fitting_example
 % 2017-2020, Alexander Heimel
 
 %% measure data
-clear all
+%clear all
 nature_params = [5 -4 3];
 disp(['Nature: ' mat2str(nature_params)]);
 
 n_trials = 10;
-data.x = repmat(0:0.1:1,n_trials,1) + 0.1*rand(n_trials,11)-0.05;
-data.y = polyval(nature_params,data.x) + rand(size(data.x));
+data.x = repmat(0:0.1:1,n_trials,1) + 0.1*(rand(n_trials,11)-0.5);
+data.y = polyval(nature_params,data.x) + (rand(size(data.x))-0.5);
 
 % plot data
 figure;
