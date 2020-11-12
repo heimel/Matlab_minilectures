@@ -1,0 +1,122 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:02.310
+Xing Chen: You okay great thing.
+
+2
+00:00:04.020 --> 00:00:14.820
+Xing Chen: Okay, so I went to talk about parallel processing and MATLAB. And this is one of the more you could call it a slightly more advanced feature of Matlock so
+
+3
+00:00:15.330 --> 00:00:25.560
+Xing Chen: I'm taking us or something which is good to know in the future, in case it ever becomes useful and then you can always look this up again.
+
+4
+00:00:27.330 --> 00:00:43.410
+Xing Chen: Okay, so what exactly is parallel processing. Let's say that you have these huge data sets and you're starting to realize that you're bumping up against limits and your computational power.
+
+5
+00:00:44.820 --> 00:00:53.010
+Xing Chen: Or let's say that it's taking a very long time to run through your analyses, because it's it's such a large amount of data.
+
+6
+00:00:54.030 --> 00:00:59.040
+Xing Chen: Well, one way to solve that is to upgrade your equipment and get a better computer
+
+7
+00:01:01.140 --> 00:01:15.960
+Xing Chen: However, this one very simple trick which MATLAB already provides in what they call the parallel processing tool box, and I'm going to provide a concrete example. Let's say process data from 10 different days.
+
+8
+00:01:17.010 --> 00:01:32.280
+Xing Chen: And each processing step takes 10 minutes. And so if I do all of these in series. If I process the data from the 10 sessions, one after another, it could take, let's say 17 hours. So I would run my data overnight.
+
+9
+00:01:35.190 --> 00:01:56.670
+Xing Chen: However, these days a lot of PCs come with multiple cores, for example, PCs with a dual quad core. They actually have eight computers and you can run your jobs in parallel across these eight cores. So you could divide the amount of time it takes to do your analysis by effect of eight.
+
+10
+00:01:58.320 --> 00:02:07.020
+Xing Chen: Pounds at work. This is not magic. And the thing is that it's a very powerful tool that only involves two simple functions.
+
+11
+00:02:09.270 --> 00:02:22.230
+Xing Chen: So, okay, and analogy. Let's say you're lining up at the post office. And there's only one counter open in a second counter opens, then you have got Marcuse and stuff jobs can go through at the same time.
+
+12
+00:02:24.180 --> 00:02:27.780
+Xing Chen: However, what you have to pay attention to is that
+
+13
+00:02:28.890 --> 00:02:35.550
+Xing Chen: The jobs are being processed by these two different counters needs to be independent of each other.
+
+14
+00:02:36.450 --> 00:02:50.610
+Xing Chen: So let's say that I'm standing at the post office. The Lady in front of me, she's paying a bill, and I want to pose a letter. So we are unrelated our tasks could go at the same time, they could go at different times, it could go one after another.
+
+15
+00:02:52.590 --> 00:02:59.820
+Xing Chen: However, let's imagine that the processing of these tasks is dependent on each other. So let's say
+
+16
+00:03:00.390 --> 00:03:10.890
+Xing Chen: This lady in front of me as I changed my mom and she needs to do a transaction at the post office and then she has to give me the result of her transaction before I can do my tasks.
+
+17
+00:03:11.340 --> 00:03:25.170
+Xing Chen: So my task is dependent on the output of her tasks in this situation, you cannot run the processes in parallel, because you need to do one task first get the output and then do the second task.
+
+18
+00:03:26.040 --> 00:03:36.480
+Xing Chen: So in this sort of situation. You cannot do parallel processing parallel processing is only possible if the tasks are independent, and they can be run simultaneously.
+
+19
+00:03:38.190 --> 00:03:55.920
+Xing Chen: Okay, so I'm going to show you this. Again, visually, let's mention that I have all these different files wanted 20 across 10 sessions I could process them in this manner and series which will take a very long time.
+
+20
+00:03:57.000 --> 00:03:57.450
+Xing Chen: Or
+
+21
+00:03:58.560 --> 00:04:13.620
+Xing Chen: I'm just gonna skip these slides, very quickly are I coat, process them. For example, in in 10 different steps. So this would go at the same time as this one of the things is this one, etc.
+
+22
+00:04:15.510 --> 00:04:17.670
+Xing Chen: Okay, so it would look like this.
+
+23
+00:04:18.990 --> 00:04:29.910
+Xing Chen: I'm going to skip some of these details and just go to how you implement this. And so basically you have to find
+
+24
+00:04:31.110 --> 00:04:47.850
+Xing Chen: The highest level of at which you can split your data, such that these different tasks can run in parallel. And instead of using for loops, you use something called powerful loops so parallel for loops.
+
+25
+00:04:49.410 --> 00:05:08.310
+Xing Chen: I have some sample code, which explains how to use this, you probably don't have to worry about it too much for most of you want to just starting out with that lab, but this is simply to give you an idea that this is possible. And if you start working with a lot of data, you can look for
+
+26
+00:05:09.360 --> 00:05:19.290
+Xing Chen: The loops in your code, let's say. Imagine that you're looking through your data from 10 different sessions and you use a for loop to go through a session one to 10
+
+27
+00:05:20.160 --> 00:05:32.370
+Xing Chen: So basically it processes, the data from one to 10 and series, but if you use a powerful instead of a four, then the code will process all these 10 sessions in parallel.
+
+28
+00:05:35.040 --> 00:05:46.260
+Xing Chen: Okay, so that's that's the basics on how to use parallel processing. And that was, does anyone have questions.
+
+29
+00:06:05.970 --> 00:06:09.090
+Xing Chen: Okay, well, we have two minutes left.
+
+30
+00:06:10.980 --> 00:06:13.230
+Xing Chen: I think we can stop the recording.
+

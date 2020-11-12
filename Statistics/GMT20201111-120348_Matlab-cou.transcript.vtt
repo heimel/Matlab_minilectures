@@ -1,0 +1,274 @@
+WEBVTT
+
+1
+00:00:01.650 --> 00:00:03.330
+Leander: Okay, it's recording it says
+
+2
+00:00:03.480 --> 00:00:04.410
+To the clothes.
+
+3
+00:00:05.520 --> 00:00:15.389
+Xing Chen: Okay. Thanks, Linda. So the background, sorry, is that when I was doing my PhD. I'll do you think a lot of different tests. And every time I
+
+4
+00:00:16.049 --> 00:00:36.420
+Xing Chen: Wanted to use a new test for example of trying to do a test are and then Nova. I had to look up the MATLAB function of the health function and learn how to use that test. And so basically what kind of input arguments to to give the function and how to structure the data.
+
+5
+00:00:36.930 --> 00:00:37.410
+Aline Mak: In
+
+6
+00:00:37.440 --> 00:00:38.640
+Xing Chen: The particular way.
+
+7
+00:00:39.060 --> 00:00:53.550
+Xing Chen: That the function would be able to parse it and actually carry out the analysis. And the thing is that this differs for every single function. So each function has a particular
+
+8
+00:00:54.630 --> 00:01:06.450
+Xing Chen: Way in which it wants you to structure your data. And all of this is quite arbitrary and I realized that this is something that I would have to look up every single time.
+
+9
+00:01:06.960 --> 00:01:24.090
+Xing Chen: So I compiled the most commonly used functions and I made a little scripts, where I basically listed each of these functions. And then I took some notes and to remind myself of how to use this so that I wouldn't have to
+
+10
+00:01:25.230 --> 00:01:28.860
+Xing Chen: Look up the map help function again in the future.
+
+11
+00:01:29.880 --> 00:01:51.570
+Xing Chen: And so I use this script. It's called steps demo as a kind of reference manual for myself where everything is in one place and I have example. So it's really easy for me personally to just look up what I need to find. So let's just go through a few examples. SO FAR T test.
+
+12
+00:01:52.830 --> 00:02:11.670
+Xing Chen: When you want to test for example, if the meanest distribution of a distribution is different from a particular value or to test whether to distribution have significantly different means. Then you've got different types of tests. Teach us so you have, for example,
+
+13
+00:02:12.690 --> 00:02:17.340
+Xing Chen: Some function called T tests we have something called T test two
+
+14
+00:02:22.140 --> 00:02:41.790
+Xing Chen: And you can use them in many different ways. So for example, if you just want to compare whether the mean of the distribution is different from a particular value such as zero, then you just give this function t test one input argument, which is your distribution.
+
+15
+00:02:42.990 --> 00:02:50.160
+Xing Chen: If you want to test if it's significantly different from a particular value than you give that as a second input argument.
+
+16
+00:02:51.510 --> 00:02:59.220
+Xing Chen: If you want to test whether the means of two distributions are different from each other. Then you input the to distribution.
+
+17
+00:03:00.270 --> 00:03:17.190
+Xing Chen: And so on and so forth. So, um, this is I just like having the scripts, because then I can remember when I need to use t test and how to use it with the input arguments or when I need to use t test to
+
+18
+00:03:20.700 --> 00:03:41.790
+Xing Chen: Okay. And the second thing is that when I run a T test I get my results. So I have my each. So that could be one or zero, depending on whether hypothesis. The null hypothesis is rejected on that my p value my confidence interval and various statistics.
+
+19
+00:03:42.900 --> 00:03:52.050
+Xing Chen: And so let's say I just run one of these. And so I do find my distribution and
+
+20
+00:03:53.520 --> 00:04:00.510
+Xing Chen: I highlight my code and I pressed F9 to run the code and now I am going to
+
+21
+00:04:01.710 --> 00:04:02.460
+Xing Chen: My teachers.
+
+22
+00:04:05.340 --> 00:04:16.530
+Xing Chen: And here, as you can see basically when I run the T test, it returns all of these outputs which is HP confidence interval and steps.
+
+23
+00:04:17.790 --> 00:04:31.260
+Xing Chen: And the thing is that every time I run a test. I, I get this information friends about if I do not suppressive a colon here. Um, but it's not in the right format for
+
+24
+00:04:32.190 --> 00:04:48.420
+Xing Chen: Writing it in a thesis or in an article and that's very annoying. So I always need to have my code which actually parses the results in a way that I can copy and paste into my manuscript, for example.
+
+25
+00:04:49.980 --> 00:04:56.640
+Xing Chen: Also, I have this standard line of code that I always use where I just automatically
+
+26
+00:04:58.020 --> 00:05:06.690
+Xing Chen: translate the results. I get from the output of the T test into something that I can literally just copy and paste into my document.
+
+27
+00:05:08.010 --> 00:05:24.030
+Xing Chen: So this makes life a lot easier because then I'm not. I'm copying and pasting from here, the P value and then going into steps and copying and pasting degrees of freedom and my t statistic and so on.
+
+28
+00:05:26.040 --> 00:05:30.990
+Xing Chen: And so these are the main reasons why I have this kind of static code.
+
+29
+00:05:32.280 --> 00:05:42.540
+Xing Chen: And I'm not going to go through everything in detail, but I'll share. I'll be sharing this code along with the presentations and and lectures online.
+
+30
+00:05:43.590 --> 00:05:57.720
+Xing Chen: So you can always use this for your own reference or if you want to, you know, very quickly be able to report your statistics and degrees of freedom and so on. It can use these as example. So I'm channel. I'll people
+
+31
+00:05:58.740 --> 00:06:10.800
+Xing Chen: Should probably understand what exactly it's doing before, just kind of copying and using it, but I have a lot of different statistics in here. So you have free to use this as a reference document.
+
+32
+00:06:12.330 --> 00:06:17.580
+Xing Chen: So the same for non parametric test. For example, signed to rank test.
+
+33
+00:06:19.410 --> 00:06:22.530
+Xing Chen: Or rank some tests I have
+
+34
+00:06:23.910 --> 00:06:26.520
+Xing Chen: Correlations and partial correlations
+
+35
+00:06:30.420 --> 00:06:37.830
+Xing Chen: And I also have a for each of these tests I have these example I create example data.
+
+36
+00:06:39.210 --> 00:06:46.140
+Xing Chen: And then I for example, here I have example Dina I create a little plot. And then I have
+
+37
+00:06:47.490 --> 00:06:52.290
+Xing Chen: The lines of code that show me how to perform the statistical analysis.
+
+38
+00:06:53.340 --> 00:06:59.010
+Xing Chen: You can have. Yeah. Want to have to tell test and and so on can get quite detail.
+
+39
+00:07:00.330 --> 00:07:06.540
+Xing Chen: I also have test for a nova and this is really useful finds because
+
+40
+00:07:07.770 --> 00:07:15.180
+Xing Chen: You need to know how to format your, your data. So for example, if you have a data set. You have to know
+
+41
+00:07:16.830 --> 00:07:22.110
+Xing Chen: How to orient your matrix. So, um,
+
+42
+00:07:23.520 --> 00:07:33.510
+Xing Chen: Yeah, I think I probably shouldn't going to allow detail now, but it just reminds me of how to format to do that properly so that the anoma function can actually read it.
+
+43
+00:07:38.310 --> 00:07:40.320
+Xing Chen: So bossa nova test.
+
+44
+00:07:43.740 --> 00:07:45.840
+Xing Chen: Also Crisco Wallace test.
+
+45
+00:07:46.920 --> 00:07:59.730
+Xing Chen: Test, test for normality test for Skegness our potatoes business which is a measure of how keep the distribution is as far as good as the city.
+
+46
+00:08:03.510 --> 00:08:04.890
+Xing Chen: That's what equal variances.
+
+47
+00:08:07.290 --> 00:08:19.890
+Xing Chen: Guys were good. Goodness of Fit stuff. And again, one of the reasons why I have these kinds of letters, this chi square is a technique that can be used for a lot of different situations. So there's
+
+48
+00:08:20.490 --> 00:08:37.410
+Xing Chen: Quite a few different statistical analyses that all use high square and it can get a little confusing, it's priceless as a Varian, I swear to goodness of fit. For example, and these are all things that, um, yeah, I just wanted to document and having one thing
+
+49
+00:08:40.350 --> 00:08:43.230
+Xing Chen: I'm Pearson's chi square test of independence.
+
+50
+00:08:44.550 --> 00:08:54.210
+Xing Chen: And and some other, more complex tests for things like circular statistics and so on. Yeah. So this was really just to
+
+51
+00:08:56.280 --> 00:09:02.910
+Xing Chen: Show you what the script was about and give you the option of using it in case it's useful in the future.
+
+52
+00:09:05.070 --> 00:09:08.130
+Xing Chen: Okay, so are there any questions.
+
+53
+00:09:15.690 --> 00:09:16.590
+Inge van Ooijen: No, it's pretty nice.
+
+54
+00:09:19.830 --> 00:09:20.250
+Xing Chen: Yeah.
+
+55
+00:09:20.970 --> 00:09:21.660
+Erika Juarez: Very useful.
+
+56
+00:09:23.520 --> 00:09:24.450
+Xing Chen: Oh, was that
+
+57
+00:09:25.260 --> 00:09:27.000
+Erika Juarez: This is going to be very useful. Thank you.
+
+58
+00:09:28.560 --> 00:09:30.900
+Xing Chen: If that semester. Oh no. Erica.
+
+59
+00:09:31.650 --> 00:09:33.870
+Erika Juarez: Yeah. Now you said those was going to be very useful.
+
+60
+00:09:33.960 --> 00:09:34.740
+Thanks. Well,
+
+61
+00:09:35.880 --> 00:09:39.570
+Xing Chen: Yeah, that's I'm hoping one day.
+
+62
+00:09:39.900 --> 00:09:41.340
+And I made this for myself.
+
+63
+00:09:44.040 --> 00:09:53.370
+Xing Chen: Okay, great. So if you have any questions later, feel free to email me and Leander is your tutor for this afternoon.
+
+64
+00:09:54.360 --> 00:09:56.010
+Xing Chen: hang around for a little bit, just
+
+65
+00:09:56.010 --> 00:10:02.790
+Xing Chen: To just to help me under if necessary, and then I'll see you again at the end of the day.
+
+66
+00:10:03.900 --> 00:10:05.580
+Livia dominicus: Don't forget to stop the recording.
+
+67
+00:10:06.990 --> 00:10:07.230
+Leander: Okay.
+
+68
+00:10:07.320 --> 00:10:08.880
+Xing Chen: Yeah, and so on.
+
