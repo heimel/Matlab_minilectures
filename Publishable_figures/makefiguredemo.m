@@ -37,5 +37,5 @@ title('1/e^{x}');
 
 
 set(gca,'tickdir','out');
-saveas(gcf,'example.pdf','pdf');
-
+%saveas(gcf,'example.pdf','pdf');
+exportgraphics(gcf,'example.pdf')
