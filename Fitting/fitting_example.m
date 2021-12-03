@@ -4,7 +4,7 @@ function fitting_example
 % 2017-2020, Alexander Heimel
 
 %% measure data
-%clear all
+clear all
 nature_params = [5 -4 3];
 disp(['Nature: ' mat2str(nature_params)]);
 
@@ -24,6 +24,9 @@ x = linspace(min(data.x(:)),max(data.x(:)),100);
 hold on
 h.lm = plot(x,co(1) + co(2)*x,'-','linewidth',2);
 
+disp('See also fitlme and glmfit for mixed effect model and generalized linear model');
+
+
 %% fit model using polyfit
 polyfit_params = polyfit(data.x(:),data.y(:),2);
 disp(['Polyfit: ' mat2str(polyfit_params,3)]);
@@ -38,5 +41,5 @@ hold on
 h.fmin = plot(x,polyval(fmin_params,x),'-','linewidth',2);
 
 function cost = poly_cost(params,data)
-cost = sum((polyval(params,data.x(:)) - data.y(:) ).^2);
+cost = sum((polyval(params,data.x(:)) - data.y(:) ).^2 ) ;
 
